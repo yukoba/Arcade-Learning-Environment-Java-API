@@ -1,10 +1,10 @@
 # Arcade Learning Environment Java API
 
-The source code was generated using [JExtract](https://jdk.java.net/jextract/) and has been confirmed to work on Ubuntu 24.04 and MSYS2.
+The source code was generated using [JExtract](https://jdk.java.net/jextract/) and confirmed to work on Ubuntu 24.04 and MSYS2.
 
 ## Ubuntu 24.04
 
-Please compile [the Arcade Learning Environment C API](https://github.com/yukoba/Arcade-Learning-Environment-C-API) and copy `build/src/ale/libale.so` to the top folder.
+Please compile the [Arcade Learning Environment C API](https://github.com/yukoba/Arcade-Learning-Environment-C-API) and copy `build/src/ale/libale.so` to the top folder.
 
 ```sh
 sudo apt install maven openjdk-21-jdk
@@ -15,9 +15,9 @@ MAVEN_OPTS="--enable-preview --enable-native-access=ALL-UNNAMED -Djava.library.p
 
 ## MSYS2 MINGW64 (Windows)
 
-Please compile [the Arcade Learning Environment C API](https://github.com/yukoba/Arcade-Learning-Environment-C-API) and copy `build/src/ale/libale.dll` to the top folder.
+Please compile the [Arcade Learning Environment C API](https://github.com/yukoba/Arcade-Learning-Environment-C-API) and copy `build/src/ale/libale.dll` to the top folder.
 
-Install Apache Maven and Java SE Development Kit 21.
+Install Apache Maven and Java Development Kit 21.
 
 ```bat
 set "JAVA_HOME=C:\Program Files\Java\Jdk-21"
@@ -29,3 +29,7 @@ rename libale.dll ale.dll
 mvn package -DskipTests
 mvn exec:java -Dexec.mainClass=jp.yukoba.ale.Test -Dexec.args=pong.bin -Dexec.classpathScope=test
 ```
+
+# Related project
+
+- [Gym NES Java API](https://github.com/yukoba/Gym-NES-Java-API) - NES version of this.
